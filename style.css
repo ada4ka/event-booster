@@ -1,0 +1,78 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+input,button{
+    border:none;
+    background: none;
+}
+input:focus-visible{
+    outline:none;
+    fill:none
+}
+:root{
+    --pink:#DC56C5;
+    --gray:#939393;
+    --violet:#4C00FE
+}
+.page-wrapper{
+    background: black;
+    min-height: 100vh;
+
+}
+.header{
+   
+    background: url(/img/photo.jpg)no-repeat center/cover;
+position:relative;
+padding: 40px 40px 113px 40px;
+margin:0 auto ;
+
+}
+.header-title{
+    font-size: 50px;
+    font-weight: 900;
+    color:var(--pink);
+    text-align: center;
+    margin-bottom: 50px;
+}
+.header-search{
+    display: flex;
+    justify-content: center;
+column-gap: 30px;
+
+}
+input{
+    padding: 10px 0px 10px 30px;
+    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    color: white;
+}
+input::placeholder{
+    color:var(--gray);
+}
+.main-card{
+    width: 196px;
+}
+.main-card-date{
+    color: white;
+    text-align: center
+
+}
+.main-card-title{
+    color: white;
+    text-align: center
+}
+.main-card-geo{
+    color: white;
+    text-align: center
+}
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    background: white;
+  
+
+}
