@@ -79,7 +79,7 @@ input::placeholder{
     align-items: center;
 }
 .modal{
-    display: block;
+    position: relative;
     background: white;
     overflow: scroll;
     padding: 62px 30px;
@@ -88,6 +88,12 @@ input::placeholder{
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+.modal-close{
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    cursor: pointer;
 }
 .modal-logo{
     width: 132px;
