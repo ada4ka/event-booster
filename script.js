@@ -1,5 +1,4 @@
 const cross = document.querySelector('.modal-close')
-
 const overlay = document.querySelector('.overlay')
 
 cross.addEventListener('click',function(){
@@ -36,7 +35,6 @@ const list = document.querySelector(".main");
  function createMarkup(arr) {
     console.log(arr)
     const html = arr.events.map((item) => {
-        console.log(item.dates.start.localDate)
         return `<li class="main-card">
                      <div class="main__style-div"></div>
                      <img class="main-card-poster" src="${item.images[0].url}" alt="poster"/>
@@ -63,4 +61,12 @@ searcInput.addEventListener("input", _.debounce(() => {
 
 
 // enter input - end
+
+const mainCard = document.querySelectorAll('.main-card')
+mainCard.forEach((element)=>{
+    element.addEventListener('click',function(){
+alert('привет')
+    })
+})
+// запустить когда будет маин
 
