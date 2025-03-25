@@ -1,6 +1,8 @@
 const cross = document.querySelector('.modal-close')
 const overlay = document.querySelector('.overlay')
 
+overlay.style.display = 'none'
+
 cross.addEventListener('click',function(){
     overlay.style.display = 'none'
 })
@@ -46,6 +48,16 @@ const list = document.querySelector(".main");
 
     list.innerHTML = html;
 }
+
+getEventApi().then((data) => {
+    createMarkup(data._embedded)
+});
+const mainCard = document.querySelectorAll('.main-card')
+mainCard.forEach((element)=>{
+    element.addEventListener('click',function(){
+overlay.style.display = 'flex'
+    })
+})
 function searcPost() {
     const keyWord = searcInput.value;
 
@@ -53,6 +65,12 @@ function searcPost() {
         createMarkup(data._embedded)
     });
 }
+const mainCard = document.querySelectorAll('.main-card')
+mainCard.forEach((element)=>{
+    element.addEventListener('click',function(){
+overlay.style.display = 'flex'
+    })
+})
 const searcInput = document.querySelector(".header-search-ticket");
 
 searcInput.addEventListener("input", _.debounce(() => {
@@ -62,11 +80,5 @@ searcInput.addEventListener("input", _.debounce(() => {
 
 // enter input - end
 
-const mainCard = document.querySelectorAll('.main-card')
-mainCard.forEach((element)=>{
-    element.addEventListener('click',function(){
-alert('привет')
-    })
-})
-// запустить когда будет маин
 
+// запустить когда будет маин
